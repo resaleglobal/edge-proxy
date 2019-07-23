@@ -1,0 +1,13 @@
+version: "2"
+services:
+  edge-proxy:
+    container_name: edge-proxy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: edge-proxy
+    stdin_open: true
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
